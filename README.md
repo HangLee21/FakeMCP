@@ -39,7 +39,7 @@ Skills are implemented using multiple tool calls.
 
 # Repository Structure
 
-
+```
 FakeMcp/
 ├── server.py
 ├── interactive_client.py
@@ -58,8 +58,10 @@ FakeMcp/
 │ │ ├── SKILL.md
 │ │ └── REFERENCE.md
 │ └── add_feature_skill/
-│ └── SKILL.md
+│ │ └──  SKILL.md
 └── demo_project_backup/
+```
+
 
 
 ### server.py
@@ -115,7 +117,7 @@ Used to reset the project state during demonstrations.
 
 The interaction flow is:
 
-
+```
 User
 ↓
 Client (simulated AI agent)
@@ -127,16 +129,19 @@ MCP Server
 Tool Execution
 ↓
 Project Files / Tests / Skills
+```
 
 
 Example workflow:
 
-
+```
 Read issue
 → Read source code
 → Modify implementation
 → Run tests
 → Verify results
+```
+
 
 
 ---
@@ -146,31 +151,45 @@ Read issue
 Make sure Python is installed.
 
 Then run:
-
 ```bash
 python interactive_client.py
+```
+
 
 You should see:
 
-Project MCP Server started.
+```Project MCP Server started.```
+
 Example Commands
 List available tools
-tools
+
+```tools```
+
 Show issue description
-issue
+
+```issue```
+
 Read source code
-show app/todo_service.py
+
+```show app/todo_service.py```
+
 Run tests
-test
+
+```test```
+
 Run automatic bug fix workflow
-auto_fix
+
+```auto_fix```
+
 Reset the project state
-reset
+
+```reset```
+
 Assignment: Implement Your Own Tool
 
 Students must implement a new MCP Tool:
 
-add_function(path, function_name, function_code)
+```add_function(path, function_name, function_code)```
 
 Goal:
 
@@ -178,22 +197,22 @@ Insert a new Python function into the specified file.
 
 The implementation should:
 
-Read the target file
+1.  Read the target file
 
-Check whether the function already exists
+2. Check whether the function already exists
 
-Append the function definition
+3. Append the function definition
 
-Save the updated file
+4. Save the updated file
 
 TODO locations are provided in:
 
-server.py
+```server.py```
 Assignment: Implement a Skill
 
 Students must create a new skill:
 
-add_feature_skill
+```add_feature_skill```
 
 Goal:
 
@@ -201,57 +220,41 @@ Add a new feature to the Todo application.
 
 Feature:
 
-count_completed_tasks(tasks)
+```count_completed_tasks(tasks)```
 
 The skill should perform the following workflow:
 
-Read the issue description
+1. Read the issue description
 
-Inspect the source code
+2. Inspect the source code
 
-Use add_function to insert the new function
+3. Use add_function to insert the new function
 
-Add or update test cases
+4. Add or update test cases
 
-Run tests
+5. Run tests
 
-Verify the result
+6. Verify the result
 
 Skill instructions should be written in:
 
-demo_project/skills/add_feature_skill/SKILL.md
-Learning Objectives
+```demo_project/skills/add_feature_skill/SKILL.md```
+
+# Learning Objectives
 
 After completing this project, students should understand:
 
-What MCP is
+1. What MCP is
 
-How AI systems call external tools
+2. How AI systems call external tools
 
-How tools expose structured capabilities
+3. How tools expose structured capabilities
 
-How skills organize complex workflows
+4. How skills organize complex workflows
 
-How AI-assisted development works in practice
+5. How AI-assisted development works in practice
 
-Suggested Extensions
-
-Students can extend this system by implementing additional tools:
-
-Examples:
-
-search_issue
-apply_patch
-create_file
-list_skills
-summarize_issue
-
-Or create new skills such as:
-
-test_writer_skill
-code_review_skill
-refactor_skill
-Notes
+# Notes
 
 This project simulates an AI development workflow.
 
@@ -259,10 +262,10 @@ The MCP server is simplified for educational purposes.
 
 In real systems, MCP servers may connect to:
 
-GitHub repositories
+1. GitHub repositories
 
-databases
+2. databases
 
-cloud services
+3. cloud services
 
-CI pipelines
+4. CI pipelines
