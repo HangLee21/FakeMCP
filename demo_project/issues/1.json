@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "title": "Crash when fetching todo list",
+  "body": "Running get_todos() crashes. Expected behavior: return an empty list instead of throwing an exception.",
+  "related_files": [
+    "app/todo_service.py",
+    "tests/test_todo_service.py"
+  ]
+}

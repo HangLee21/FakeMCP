@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "title": "Add feature: count completed tasks",
+  "body": "We need a new function count_completed_tasks(tasks) that returns the number of completed tasks. Please also add tests for this feature.",
+  "related_files": [
+    "app/todo_service.py",
+    "tests/test_todo_service.py"
+  ]
+}
